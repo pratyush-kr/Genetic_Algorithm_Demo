@@ -14,7 +14,7 @@ def select_mating_pool(pop, fitness, num_parents):
         min_fitness_idx = numpy.where(fitness == numpy.min(fitness))    #min
         min_fitness_idx = min_fitness_idx[0][0]
         parents[parent_num, :] = pop[min_fitness_idx, :]
-        fitness[min_fitness_idx] = 99999999999     #-99999999999 
+        fitness[min_fitness_idx] = 99999999999     #-99999999999 for maximization
     return parents
 
 def crossover(parents, offspring_size):
